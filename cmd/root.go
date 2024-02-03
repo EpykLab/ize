@@ -44,9 +44,7 @@ var rootCmd = &cobra.Command{
 	Whether you're conducting penetration tests, red team exercises, or 
 	security assessments, ize is your trusted companion for collaborative 
 	information sharing and artifact management. Empower your red team with 
-	ize and elevate your offensive security operations to new heights.
-	
-	For more information and usage instructions, visit: https://your-ize-website.com`,
+	ize and elevate your offensive security operations to new heights.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
