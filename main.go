@@ -1,7 +1,7 @@
 /*
-Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-
+Copyright © 2024 Epyklab contact@epyklab.com
 */
+
 package main
 
 import "github.com/Epyklab/ize/cmd"
