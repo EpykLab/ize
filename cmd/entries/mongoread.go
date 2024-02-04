@@ -2,6 +2,7 @@ package entries
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"log"
 
@@ -47,7 +48,15 @@ func SearchEntriesByTag(tag string) error {
 		if err != nil {
 			log.Fatal("Error decoding document:", err)
 		}
-		fmt.Println(result)
+
+		// Convert the map to a JSON string with indentation
+		jsonData, err := json.MarshalIndent(result, "", "    ")
+		if err != nil {
+			log.Fatal("Error marshaling JSON:", err)
+		}
+
+		// Print the pretty printed JSON string
+		fmt.Println(string(jsonData))
 	}
 
 	if err := cursor.Err(); err != nil {
