@@ -4,6 +4,7 @@ Copyright © 2024 Epyklab contact@epyklab.com
 package cmd
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"slices"
@@ -26,6 +27,10 @@ var entryCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		val := cmd.Flag("tag").Value.String()
 		present := slices.Contains(tags.Tag, val)
+		if val == "" {
+			fmt.Println("No tag name supplied")
+			os.Exit(1)
+		}
 		if present != true {
 			log.Fatal("supplied tag not currently support")
 			os.Exit(1)

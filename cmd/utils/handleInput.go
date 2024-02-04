@@ -36,7 +36,7 @@ func SetEntryTypeByTag(tag string) {
 		fmt.Print("IP: ")
 		ip := getUserInput()
 
-		obj := entries.IPAddress{Description: description, IP: ip}
+		obj := entries.IPAddress{Description: description, IP: ip, Tags: tag}
 		marshalIn(obj)
 
 	case tag == "tagDomainName":

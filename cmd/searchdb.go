@@ -5,7 +5,12 @@ package cmd
 
 import (
 	"fmt"
+	"log"
+	"os"
+	"slices"
 
+	entries "github.com/Epyklab/ize/cmd/entries"
+	tags "github.com/Epyklab/ize/cmd/tags"
 	"github.com/spf13/cobra"
 )
 
@@ -19,7 +24,18 @@ var searchdbCmd = &cobra.Command{
 	tagging is not enforced, it is highly encouraged to ensure
 	documents are easier to find by you and others`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("searchdb called")
+		val := cmd.Flag("by").Value.String()
+		present := slices.Contains(tags.Tag, val)
+		if val == "" {
+			fmt.Println("No tag name supplied")
+			os.Exit(1)
+		}
+		if present != true {
+			log.Fatal("supplied tag not currently supported")
+			os.Exit(1)
+		} else {
+			entries.SearchEntriesByTag(val)
+		}
 	},
 }
 
@@ -35,4 +51,5 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// searchdbCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	searchdbCmd.Flags().String("by", "", "tag to search entries by")
 }
