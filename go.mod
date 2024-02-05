@@ -3,6 +3,7 @@ module github.com/Epyklab/ize
 go 1.21.6
 
 require (
+	github.com/aws/aws-sdk-go v1.50.10
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/viper v1.18.2
 	go.mongodb.org/mongo-driver v1.13.1
@@ -13,6 +14,7 @@ require (
 	github.com/golang/snappy v0.0.1 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
+	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/klauspost/compress v1.17.0 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect

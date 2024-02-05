@@ -4,8 +4,7 @@ Copyright © 2024 Epyklab contact@epyklab.com
 package cmd
 
 import (
-	"fmt"
-
+	"github.com/Epyklab/ize/cmd/entries"
 	"github.com/spf13/cobra"
 )
 
@@ -16,7 +15,8 @@ var uploadCmd = &cobra.Command{
 	Long: `Uploads object(s) to the s3 bucket that is defined in the 
 	config filed"`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("upload called")
+		filepath := cmd.Flag("file").Value.String()
+		entries.UploadToS3(filepath)
 	},
 }
 
@@ -31,5 +31,5 @@ func init() {
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	// uploadCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	uploadCmd.Flags().String("file", "", "path to object to upload")
 }
