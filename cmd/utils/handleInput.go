@@ -7,6 +7,7 @@ import (
 	"os"
 
 	entries "github.com/Epyklab/ize/cmd/entries"
+	"github.com/spf13/viper"
 )
 
 type Marshalable interface{}
@@ -36,7 +37,8 @@ func SetEntryTypeByTag(tag string) {
 		fmt.Print("IP: ")
 		ip := getUserInput()
 
-		obj := entries.IPAddress{Description: description, IP: ip, Tags: tag}
+		//BUG: author value is not being accessed here.
+		obj := entries.IPAddress{Author: viper.GetString("self"), Description: description, IP: ip, Tags: tag}
 		marshalIn(obj)
 
 	case tag == "tagDomainName":

@@ -4,6 +4,7 @@ package entries
 
 // IP Address struct
 type IPAddress struct {
+	Author      string `json:"author"`
 	IP          string `json:"ip"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -11,6 +12,7 @@ type IPAddress struct {
 
 // Domain Name struct
 type DomainName struct {
+	Author      string `json:"author"`
 	Name        string `json:"name"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -18,6 +20,7 @@ type DomainName struct {
 
 // Username struct
 type Username struct {
+	Author      string `json:"author"`
 	Username    string `json:"username"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -25,6 +28,7 @@ type Username struct {
 
 // Password struct
 type Password struct {
+	Author      string `json:"author"`
 	Password    string `json:"password"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -32,6 +36,7 @@ type Password struct {
 
 // STS Token struct
 type STSToken struct {
+	Author      string `json:"author"`
 	Token       string `json:"token"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -39,6 +44,7 @@ type STSToken struct {
 
 // API Key struct
 type APIKey struct {
+	Author      string `json:"author"`
 	Key         string `json:"key"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -46,6 +52,7 @@ type APIKey struct {
 
 // Certificate struct
 type Certificate struct {
+	Author      string `json:"author"`
 	Certificate string `json:"certificate"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -53,6 +60,7 @@ type Certificate struct {
 
 // Vulnerability struct
 type Vulnerability struct {
+	Author      string `json:"author"`
 	Name        string `json:"name"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -60,6 +68,7 @@ type Vulnerability struct {
 
 // Exploit struct
 type Exploit struct {
+	Author      string `json:"author"`
 	Name        string `json:"name"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -67,6 +76,7 @@ type Exploit struct {
 
 // Payload struct
 type Payload struct {
+	Author      string `json:"author"`
 	Payload     string `json:"payload"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -74,6 +84,7 @@ type Payload struct {
 
 // Evidence struct
 type Evidence struct {
+	Author      string `json:"author"`
 	Evidence    string `json:"evidence"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -81,6 +92,7 @@ type Evidence struct {
 
 // Screenshot struct
 type Screenshot struct {
+	Author      string `json:"author"`
 	URL         string `json:"url"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -88,6 +100,7 @@ type Screenshot struct {
 
 // Video struct
 type Video struct {
+	Author      string `json:"author"`
 	URL         string `json:"url"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -95,6 +108,7 @@ type Video struct {
 
 // Log struct
 type Log struct {
+	Author      string `json:"author"`
 	Log         string `json:"log"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -102,6 +116,7 @@ type Log struct {
 
 // Report struct
 type Report struct {
+	Author      string `json:"author"`
 	Report      string `json:"report"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -109,6 +124,7 @@ type Report struct {
 
 // Configuration struct
 type Configuration struct {
+	Author      string `json:"author"`
 	Config      string `json:"config"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -116,6 +132,7 @@ type Configuration struct {
 
 // Artifact struct
 type Artifact struct {
+	Author      string `json:"author"`
 	Artifact    string `json:"artifact"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -123,6 +140,7 @@ type Artifact struct {
 
 // Backup struct
 type Backup struct {
+	Author      string `json:"author"`
 	Backup      string `json:"backup"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -130,6 +148,7 @@ type Backup struct {
 
 // MalwareSample struct
 type MalwareSample struct {
+	Author      string `json:"author"`
 	Sample      string `json:"sample"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
@@ -137,6 +156,7 @@ type MalwareSample struct {
 
 // Incident struct
 type Incident struct {
+	Author      string `json:"author"`
 	Name        string `json:"name"`
 	Description string `json:"description"`
 	Tags        string `json:"tags"`
