@@ -12,6 +12,7 @@ import (
 	tags "github.com/Epyklab/ize/cmd/tags"
 	userio "github.com/Epyklab/ize/cmd/utils"
 	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
 )
 
 // entryCmd represents the entry command
@@ -26,6 +27,7 @@ var entryCmd = &cobra.Command{
 	documents are easier to find by you and others`,
 	Run: func(cmd *cobra.Command, args []string) {
 		val := cmd.Flag("tag").Value.String()
+		author := viper.GetString("self")
 		present := slices.Contains(tags.Tag, val)
 		if val == "" {
 			fmt.Println("No tag name supplied")
@@ -35,7 +37,7 @@ var entryCmd = &cobra.Command{
 			log.Fatal("supplied tag not currently support")
 			os.Exit(1)
 		} else {
-			userio.SetEntryTypeByTag(val)
+			userio.SetEntryTypeByTag(val, author)
 		}
 	},
 }

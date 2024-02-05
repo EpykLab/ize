@@ -26,11 +26,14 @@ func marshalIn(obj Marshalable) {
 	entries.MakeMongoEntry(jsonData)
 }
 
-func SetEntryTypeByTag(tag string) {
+func SetEntryTypeByTag(tag string, author string) {
 
 	switch tag := tag; {
 
 	case tag == "tagIPAddress":
+		fmt.Print("Name: ")
+		name := getUserInput()
+
 		fmt.Print("Description: ")
 		description := getUserInput()
 
@@ -38,7 +41,7 @@ func SetEntryTypeByTag(tag string) {
 		ip := getUserInput()
 
 		//BUG: author value is not being accessed here.
-		obj := entries.IPAddress{Author: viper.GetString("self"), Description: description, IP: ip, Tags: tag}
+		obj := entries.IPAddress{Name: name, Author: viper.GetString("self"), Description: description, IP: ip, Tags: tag}
 		marshalIn(obj)
 
 	case tag == "tagDomainName":
