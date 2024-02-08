@@ -1,3 +1,6 @@
+/*
+Copyright © 2024 Epyklab contact@epyklab.com
+*/
 package entries
 
 // Define structs for storing different types of objects

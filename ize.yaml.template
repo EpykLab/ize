@@ -1,0 +1,27 @@
+database:
+  mongo_conn_str: mongo_connection_string
+  collection: mongo collection name
+  database: ize-dev-db
+customer:
+  name: example
+  customer_alias: ex
+team:
+  self: username of operator
+
+#####################################
+## CUSTOM TAGS NOT IMPLEMENTED YET ##
+#####################################
+
+tags: # not implemented yet, 
+  - tag: name1 # required
+    author: string # required
+    name: string # required
+    # can define any number of abritrary fields
+    field: string # field name and field type
+  - tag: name2 # required
+    author: string # required
+    name: string # required
+    # can define any number of abritrary fields
+    field: string # field name and field type
+
+

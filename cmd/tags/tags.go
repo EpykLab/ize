@@ -1,3 +1,6 @@
+/*
+Copyright © 2024 Epyklab contact@epyklab.com
+*/
 package tags
 
 var (

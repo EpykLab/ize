@@ -1,3 +1,6 @@
+/*
+Copyright © 2024 Epyklab contact@epyklab.com
+*/
 package entries
 
 import (
@@ -10,7 +13,7 @@ import (
 	"github.com/spf13/viper"
 )
 
-func UploadToS3(path string) error {
+func UploadToS3(filename string) error {
 	endpoint := "nyc3.digitaloceanspaces.com"
 	region := "nyc3"
 	sess := session.Must(session.NewSession(&aws.Config{
@@ -20,7 +23,6 @@ func UploadToS3(path string) error {
 
 	uploader := s3manager.NewUploader(sess)
 
-	filename := path
 	f, err := os.Open(filename)
 	if err != nil {
 		return fmt.Errorf("failed to open file %q, %v", filename, err)
