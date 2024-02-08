@@ -14,7 +14,7 @@ import (
 )
 
 func UploadToS3(filename string) error {
-	endpoint := "nyc3.digitaloceanspaces.com"
+	endpoint := viper.GetString("bucket.url")
 	region := "nyc3"
 	sess := session.Must(session.NewSession(&aws.Config{
 		Endpoint: &endpoint,
