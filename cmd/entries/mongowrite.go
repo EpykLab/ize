@@ -16,9 +16,9 @@ import (
 // InsertJSONData inserts JSON data into MongoDB
 func MakeMongoEntry(jsonData []byte) error {
 	// Define MongoDB connection URI
-	connstr := viper.GetString("mongo_conn_str")
-	collection := viper.GetString("collection")
-	database := viper.GetString("database")
+	connstr := viper.GetString("database.mongo_conn_str")
+	collection := viper.GetString("database.collection")
+	database := viper.GetString("database.database")
 
 	// Set client options
 	clientOptions := options.Client().ApplyURI(connstr)

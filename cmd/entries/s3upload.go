@@ -28,7 +28,7 @@ func UploadToS3(filename string) error {
 		return fmt.Errorf("failed to open file %q, %v", filename, err)
 	}
 
-	destBucket := viper.GetString("bucket")
+	destBucket := viper.GetString("bucket.name")
 	sourceString := filename
 
 	result, err := uploader.Upload(&s3manager.UploadInput{

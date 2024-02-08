@@ -6,11 +6,12 @@ package cmd
 import (
 	"context"
 	"fmt"
+	"log"
+
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"log"
 )
 
 // healthcheckCmd represents the healthcheck command
@@ -22,7 +23,7 @@ var healthcheckCmd = &cobra.Command{
 	$HOME/.ike.yaml`,
 	Run: func(cmd *cobra.Command, args []string) {
 
-		MONGO_URI := viper.GetString("mongo_conn_str")
+		MONGO_URI := viper.GetString("database.mongo_conn_str")
 
 		clientOptions := options.Client().ApplyURI(MONGO_URI)
 		client, err := mongo.Connect(context.Background(), clientOptions)
