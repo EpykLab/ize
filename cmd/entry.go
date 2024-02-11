@@ -27,7 +27,7 @@ var entryCmd = &cobra.Command{
 	documents are easier to find by you and others`,
 	Run: func(cmd *cobra.Command, args []string) {
 		val := cmd.Flag("tag").Value.String()
-		author := viper.GetString("self")
+		author := viper.GetString("team.self")
 		present := slices.Contains(tags.Tag, val)
 		if val == "" {
 			fmt.Println("No tag name supplied")

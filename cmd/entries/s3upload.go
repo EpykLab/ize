@@ -15,7 +15,7 @@ import (
 
 func UploadToS3(filename string) error {
 	endpoint := viper.GetString("bucket.url")
-	region := "nyc3"
+	region := viper.GetString("bucket.region")
 	sess := session.Must(session.NewSession(&aws.Config{
 		Endpoint: &endpoint,
 		Region:   &region,
@@ -34,7 +34,7 @@ func UploadToS3(filename string) error {
 	result, err := uploader.Upload(&s3manager.UploadInput{
 		Bucket: aws.String(destBucket),
 		Key:    aws.String(sourceString),
-		Body:   f,
+		Body:   f, // This will upload the file including the path structure
 	})
 	if err != nil {
 		return fmt.Errorf("failed to upload file, %v", err)

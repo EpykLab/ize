@@ -4,8 +4,7 @@ Copyright © 2024 Epyklab contact@epyklab.com
 package cmd
 
 import (
-	"fmt"
-
+	"github.com/Epyklab/ize/cmd/entries"
 	"github.com/spf13/cobra"
 )
 
@@ -14,9 +13,18 @@ var searchs3Cmd = &cobra.Command{
 	Use:   "searchs3",
 	Short: "s3 objects in s3",
 	Long: `searches objects that have been uploaded to the 
-	s3 bucket defined in config file`,
+	s3 bucket defined in config file.
+	
+	Defaults to listing all objects in the defined bucket`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("searchs3 called")
+		filter := cmd.Flag("filter").Value.String()
+
+		switch {
+		case filter != "":
+			entries.ListBucketObjects(filter)
+		default:
+			entries.ListBucketObjects("all")
+		}
 	},
 }
 
@@ -31,5 +39,5 @@ func init() {
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	// searchs3Cmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	searchs3Cmd.Flags().String("filter", "", "filter for object in bucket")
 }

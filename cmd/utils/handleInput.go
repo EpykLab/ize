@@ -44,7 +44,7 @@ func SetEntryTypeByTag(tag string, author string) {
 		ip := getUserInput()
 
 		//BUG: author value is not being accessed here.
-		obj := entries.IPAddress{Name: name, Author: viper.GetString("self"), Description: description, IP: ip, Tags: tag}
+		obj := entries.IPAddress{Name: name, Author: viper.GetString("team.self"), Description: description, IP: ip, Tags: tag}
 		marshalIn(obj)
 
 	case tag == "tagDomainName":
