@@ -1,4 +1,4 @@
-module github.com/EpykLab/ize
+module github.com/Epyklab/ize
 
 go 1.21.6
 
