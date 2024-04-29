@@ -1,6 +1,17 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/Epyklab/ize)](https://goreportcard.com/report/github.com/Epyklab/ize)
+<h1 align="center">
+  <img src="assets/ize.png" alt="katana" width="200px">
+  <br>
+</h1>
 
-# ize - Collaborative Red Teaming Tool
+<h4 align="center">Collaborative Red Teaming Tool</h4>
+
+<p align="center">
+<!-- Go report card -->
+<a href="https://goreportcard.com/report/github.com/epyklab/ize"><img src="https://goreportcard.com/badge/github.com/epyklab/ize"></a>
+<!-- Current Release -->
+<a href="https://github.com/epyklab/ize/releases"><img src="https://img.shields.io/github/release/epyklab/ize"></a>
+</p>
+
 
 ize (pronounced like "eyes") is a powerful command-line tool designed
 for red teams to enhance collaboration and streamline artifact collection
