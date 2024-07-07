@@ -1,6 +1,6 @@
 module github.com/EpykLab/ize
 
-go 1.21.6
+go 1.22.3
 
 require (
 	github.com/aws/aws-sdk-go v1.50.10
