@@ -1,11 +1,11 @@
 /*
-Copyright © 2024 Epyklab contact@epyklab.com
+Copyright © 2024 EpykLab contact@epyklab.com
 */
 
 package cmd
 
 import (
-	"github.com/Epyklab/ize/cmd/entries"
+	"github.com/EpykLab/ize/cmd/entries"
 	"github.com/spf13/cobra"
 )
 

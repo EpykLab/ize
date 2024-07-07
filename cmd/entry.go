@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Epyklab contact@epyklab.com
+Copyright © 2024 EpykLab contact@epyklab.com
 */
 package cmd
 
@@ -9,8 +9,8 @@ import (
 	"os"
 	"slices"
 
-	tags "github.com/Epyklab/ize/cmd/tags"
-	userio "github.com/Epyklab/ize/cmd/utils"
+	tags "github.com/EpykLab/ize/cmd/tags"
+	userio "github.com/EpykLab/ize/cmd/utils"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

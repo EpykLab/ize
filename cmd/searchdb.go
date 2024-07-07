@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Epyklab contact@epyklab.com
+Copyright © 2024 EpykLab contact@epyklab.com
 */
 package cmd
 
@@ -9,8 +9,8 @@ import (
 	"os"
 	"slices"
 
-	entries "github.com/Epyklab/ize/cmd/entries"
-	tags "github.com/Epyklab/ize/cmd/tags"
+	entries "github.com/EpykLab/ize/cmd/entries"
+	tags "github.com/EpykLab/ize/cmd/tags"
 	"github.com/spf13/cobra"
 )
 

@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 Epyklab contact@epyklab.com
+Copyright © 2024 EpykLab contact@epyklab.com
 */
 package userio
 
@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"os"
 
-	entries "github.com/Epyklab/ize/cmd/entries"
+	entries "github.com/EpykLab/ize/cmd/entries"
 	"github.com/spf13/viper"
 )
 

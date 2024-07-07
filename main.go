@@ -1,10 +1,10 @@
 /*
-Copyright © 2024 Epyklab contact@epyklab.com
+Copyright © 2024 EpykLab contact@epyklab.com
 */
 
 package main
 
-import "github.com/Epyklab/ize/cmd"
+import "github.com/EpykLab/ize/cmd"
 
 func main() {
 	cmd.Execute()

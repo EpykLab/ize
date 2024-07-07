@@ -1,12 +1,12 @@
 /*
-Copyright © 2024 Epyklab contact@epyklab.com
+Copyright © 2024 EpykLab contact@epyklab.com
 */
 package cmd
 
 import (
 	"fmt"
 
-	tags "github.com/Epyklab/ize/cmd/tags"
+	tags "github.com/EpykLab/ize/cmd/tags"
 	"github.com/spf13/cobra"
 )
 
